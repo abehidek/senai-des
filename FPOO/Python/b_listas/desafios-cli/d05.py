@@ -1,6 +1,4 @@
-arr = [] # DATA INPUT
-par = []
-impar = []
+arr, par, impar = [],[],[]
 while True:
     arr.append(int(input("Digite um numero: ")))
     o = input("Deseja continuar? [S/N]: ")
@@ -11,6 +9,6 @@ for item in arr:
         par.append(item)
     else:
         impar.append(item)
-print('Lista: ', arr)
-print('Pares: ',par)
-print('Impares: ',impar)
+print('Lista:', arr)
+print('Pares:',par)
+print('Impares:',impar)

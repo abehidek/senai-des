@@ -1,8 +1,3 @@
-# Requirements
-# - How many numbers
-# - Descending list
-# - If number 5 is in list
-
 def inverseBubbleSort(arr):
     for n in range(len(arr)-1,0,-1):
         for i in range(n):
@@ -22,6 +17,3 @@ try:
     print('O valor 5 exista na lista no índice ',arr.index(5))
 except:
     print("Valor 5 não existe na lista")
-
-
-

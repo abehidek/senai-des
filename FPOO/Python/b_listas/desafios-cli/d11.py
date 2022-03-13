@@ -16,4 +16,4 @@ for i in range(n):
 
 for i, v in enumerate(games):
     print(f'Jogo {i+1}: {v}')
-
+    

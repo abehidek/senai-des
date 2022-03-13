@@ -1,4 +1,4 @@
-pessoas = [] # DATA INPUT
+pessoas = []
 while True:
     pessoa = []
     pessoa.append(input("Digite o nome: "))

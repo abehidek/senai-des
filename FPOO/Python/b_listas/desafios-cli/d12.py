@@ -4,8 +4,7 @@ while True:
     nome = input("Nome: ")
     n1 = float(input("Nota 1: "))
     n2 = float(input("Nota 2: "))
-    m = (n1+n2)/2
-    aluno.extend([nome, n1, n2, m])
+    aluno.extend([nome, n1, n2, (n1/n2)/2])
     alunos.append(aluno)
     o = input('Deseja continuar? [S/N]: ')
     if o.upper() == 'N':
@@ -33,9 +32,4 @@ while True:
         break
     else:
         print(f'Notas de {alunos[o][0]} são: [{alunos[o][1]}, {alunos[o][2]}]')
-# print('N     Nome    Nota 1      Nota2')
-# for aluno in alunos:
-#     for v in aluno:
-#         print('     ',v, end='')
-#     print("")
-
+        

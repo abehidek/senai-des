@@ -4,7 +4,7 @@ def bubbleSort(arr):
             if arr[i] > arr[i+1]:
                 arr[i], arr[i+1] = arr[i+1], arr[i]
     return arr
-arr = [] # DATA INPUT
+arr = list() # DATA INPUT
 while (True):
     num = int(input("Digite um numero: "))
     if num in arr:

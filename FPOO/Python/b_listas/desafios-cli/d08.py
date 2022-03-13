@@ -5,7 +5,7 @@ def bubbleSort(arr):
                 arr[i], arr[i+1] = arr[i+1], arr[i]
     return arr
 
-arr = [] # DATA INPUT
+arr = []
 par = []
 impar = []
 while True:

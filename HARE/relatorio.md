@@ -18,13 +18,13 @@
 - 10:25 - Ambos testes foram efetuados com sucesso.
 - 10:26 - Identificação das peças no CPU-Z
 [fotos]
-- #### MONTAGEM
+#### MONTAGEM
 - 10:28 - Início desmontagem do computador e verificação de peças
 - 10:50 - Nova pasta térmica aplicada
 - 10:55 - Linhas de voltagem da fonte testadas com sucesso
 [foto]
 - 11:00 - Montagem do micro com sucesso
-- #### PÓS-MONTAGEM
+#### PÓS-MONTAGEM
 - 11:00 - Criação do pendrive Bootável com Windows 10
 - 11:05 - Boot com o WinPE Sergei Strelec
 - 11:10 - Início verificação da integridade do HD pelo software Victoria 5.35

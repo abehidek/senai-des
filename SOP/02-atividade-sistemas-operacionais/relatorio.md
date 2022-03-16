@@ -190,7 +190,7 @@ O CentOS é uma distribuição Linux conhecida pelo seu alto nível de estabilid
 * * *
 
 ## 6. Oracle Solaris
-![Oracle Solaris](./img/solaris.png "Oracle Solaris")
+![Oracle Solaris](./img/solaris.jpg "Oracle Solaris")
 #### Descrição e características
 Solaris é um Sistema Operacional UNIX desenvolvido pela antiga Sun Microsystems, que é uma subsidiária da Oracle. As primeiras versões do Solaris (baseadas no código do BSD) foram chamadas SunOS, tendo o seu nome alterado para Solaris 2 quando passou a ser baseado no System V.
 
@@ -205,19 +205,36 @@ Solaris suporta arquiteturas baseadas nos processadores x86 e SPARC, e é um sis
 - Aprendizagem lenta
 - Não é Open Source
 - É pago
-- 
 #### Hardware Ideal para funcionamento
-- 
+- CPU x86
+- 1.5GB RAM
+- 13GB de espaço em disco
+
 
 * * *
 
-## 7. Red Hat
+## 7. Red Hat Enterprise Linux
 ![Red Hat](./img/redhat.png "Red Hat")
-#### Descrição e características
+#### Descrição e característic
+A Red Hat, Inc. é uma empresa dos Estados Unidos, que disponibiliza soluções baseadas no sistema
+operativo ou sistema operacional GNU/Linux, incluindo o Red Hat Enterprise Linux, além de soluções
+de software.
+O RedHat® Enterprise Linux® é um sistema operacional open source e plataforma empresarial Linux
+líder do mercado. Ele é a base que permite você escalar aplicações existentes e implantar novas
+tecnologias em ambientes bare-metal, virtuais, em containers e em todos os tipos de nuvem.
 
 #### Pontos positivos
-- 
+- Design amigável para novos usuários
+- Alta compatibilidade com softwares
+- Infraestrutura de nuvem híbrida
 #### Pontos negativos
-- 
+- Possui um histórico de muitas falhas de segurança
+- Não possui um design para controle remoto
+- Não é gratuito
+- Queda na produtividade até a adaptação ao RHET
+- Baixa compatibilidade com MS-Windows
+
 #### Hardware Ideal para funcionamento
-- 
+- Processador 1Ghz x86
+- 1GB RAM
+- 1GB de espaço em disco

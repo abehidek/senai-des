@@ -214,7 +214,7 @@ Solaris suporta arquiteturas baseadas nos processadores x86 e SPARC, e é um sis
 
 * * *
 
-## 7. Red Hat Enterprise Linux
+## 9. Red Hat Enterprise Linux
 ![Red Hat](./img/redhat.png "Red Hat")
 #### Descrição e característic
 A Red Hat, Inc. é uma empresa dos Estados Unidos, que disponibiliza soluções baseadas no sistema

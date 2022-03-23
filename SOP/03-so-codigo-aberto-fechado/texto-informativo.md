@@ -8,15 +8,19 @@ Sistemas operacionais são um conjunto de softwares que tem a função de admini
 
 Eles possibilitam uma interface de comunicação entre o usuário e a máquina.
 
-No mercado existem diversos sistemas que compartilham vários aspectos em comum, no entanto, eles diferem em várias características, uma delas é a de serem código aberto ou código fechado.
-
 Para cada sistema operacional, existe uma funcionalidade específica que server para atender um propósito. Como existem diversos tipos de computadores, existem propósitos diferentes, no entanto, se olharmos o panorama geral do mercado, vemos que o sistema operacional mais utilizado no mundo é o Android:
 
 ![Mercado de Sistemas Operacionais](./img/osmarketshare.png "Mercado de Sistemas Operacionais")
 
-Mas no mercado de computadores domésticos, como o Notebook ou computador de mesa, vemos que o sistema operacional mais utilizado é o Windows, desenvolvido pela Microsoft, e ele é um exemplo de um **sistema operacional de código fechado**
+Existem diversos aspectos em comum que são compartilhados entre os sistemas, no entanto, eles diferem em várias características para atender propósitos, uma delas é a de serem código aberto ou código fechado.
 
-Já o linux é considerado um **sistema de código aberto**, sendo utilizado amplamente em servidores e celulares (Android) e é considerado um dos sistemas mais utilizados do mundo.
+Código aberto e fechado se referem à uma característica de softwares. Todos os softwares são escritos em uma linguagem de programação, no entanto, os softwares de código fechado não permitem a pessoas (fora da empresa) de acessarem seu código escrito, eles normalmente são pagos e possuem uma licença, já softwares de código aberto permite qualquer pessoa a utilizá-lo de graça, assim como modificá-lo e distribuí-lo para qualquer outra finalidade.
+
+Um sistema operacional é considerado um software, e portanto cai na categoria de código aberto ou fechado.
+
+No mercado de computadores domésticos, como o Notebook ou computador de mesa, vemos que o sistema operacional mais utilizado é o Windows, desenvolvido pela Microsoft, e ele é um exemplo de um **software de código fechado**
+
+Já o linux é considerado um **software de código aberto**, sendo utilizado amplamente em servidores e celulares (Android) e é considerado um dos sistemas mais utilizados do mundo.
 
 ## Windows
 

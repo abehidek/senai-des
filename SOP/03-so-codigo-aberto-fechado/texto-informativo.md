@@ -1,5 +1,7 @@
 # Sistemas Operacionais de Código Aberto e Fechado
 
+#### Trabalho desenvolvido por: Guilherme Hidek Abe
+
 ## Definição
 
 Sistemas operacionais são um conjunto de softwares que tem a função de admininstrar os recursos de um sistema, desde os componentes de hardware até sistemas de arquivos.
@@ -43,6 +45,8 @@ Segunda versão do windows, lançado em dezembro de 1987, a grande inovação er
 
 O Microsoft Excel e o Word fizeram também a primeira aparição no sistema.
 
+![Windows2](./img/win2.png "Windows2")
+
 ##### Windows 3.0 e 3.1 (1990)
 
 Esta foi a primeira versão da Microsoft que fez bastante sucesso, com boas críticas do público e considerado um competidor ao Macintosh da Apple.
@@ -52,6 +56,8 @@ Ele introduziu a habilidade de rodar programas em MS-DOS tornando possível a ca
 Foi nele que surgiu o clássico Paciência, um dos jogos mais populares do mundo, e que os PCs deram os primeiros passos rumo à multimídia, com uma extensão chamada Windows 3.0 with Multimedia Extensions que adicionava suporte a gravação e reprodução de som, dispositivos MIDI e joysticks analógicos.
 
 O Windows 3.1 introduziu as fontes TrueType, que tornaram o sistema uma opção viável para “Desktop Publishing” (DTP, diagramação digital de livros, jornais e revistas) e outras pequenas funcionalidades
+
+![Windows3](./img/win3.jpg "Windows3")
 
 ##### Windows 95 (1995)
 
@@ -63,17 +69,23 @@ Ele também introduziu o conceito de "plug and play", onde ao conectar um perif�
 
 Além de outras funcionalidades e mudanças no sistema, como o uso do 32 bits.
 
+![Windows95](./img/win95.png "Windows95")
+
 ##### Windows 98 (1998)
 
 Lançado em 1998, o Windows 98 foi construido em cima do Windows 95 e trouxe novas funcionalidades com principal foco na internet.
 
 Foi a primeira versão do Windows com suporte nativo ao USB, drivers de DVD e ao barramento AGP.
 
+![Windows98](./img/win98.png "Windows98")
+
 ##### Windows ME (2000)
 
 Considerado por muitos como o ponto mais baixo da Microsoft, o Windows ME foi alvo de críticas e durou apenas um ano do mercado, foi a última versão que rodava em cima do MS-DOS.
 
 Ele não trouxe muitas melhorias em relação ao antecessor e é notório por ser "bugado".
+
+![WindowsME](./img/winme.png "WindowsME")
 
 ##### Windows XP (2001)
 
@@ -84,6 +96,8 @@ O Windows XP não dependia mais do MS-DOS e era baseado no Windows NT, criado pa
 A interface gráfica foi renovada com novos efeitos e ganhando mais cores e o papel de parede se torno uma das imagens mais famosas.
 
 O sistema também ganhou estabilidade e desempenho, com suporte a muita das novas tecnologias da época.
+
+![WindowsXP](./img/winxp.png "WindowsXP")
 
 ##### Windows Vista (2007)
 
@@ -97,11 +111,15 @@ A interface foi novamente remodelada, com mais efeitos e transparências, um est
 
 Entretanto, todos estes recursos exigem mais hardware, e o Vista rapidamente ganhou fama de ser um sistema lento e pesado. Mudanças no sistema de drivers introduziram instabilidade no funcionamento de vários componentes do hardware, e os usuários não se acostumaram com recursos como o UAC, que exigia confirmação para realizar ações que antes eram automáticas.
 
+![WindowsVista](./img/winvista.png "WindowsVista")
+
 ##### Windows 7 (2009)
 
 Considerado por muitos a "versão final do vista", o Windows 7 pegou todos os recursos do vista e integrou dando melhor suporte aos recursos, com o aumento da estabilidade e desempenho.
 
 Ele foi bem recebido e também é considerado uma das melhores versões
+
+![Windows7](./img/win7.png "Windows7")
 
 ##### Windows 8 (2012)
 
@@ -113,17 +131,23 @@ No entanto, grande parte dos usuários detestaram a idéia pois precisariam apre
 
 Após pressão dos usuários a Microsoft liberou a opção de qual seria a interface padrão do sistema.
 
+![Windows8](./img/win8.webp "Windows8")
+
 ##### Windows 10 (2015)
 
 Uma das mais bem recebidas, o Windows 10 é hoje, sem dúvidas, o sistema operacional para computadores pessoais mais estabelecido do mundo, nela, aconteceram diversas revisões na interface, para parecer mais familiar possível para novos usuários e para antigos que estavam acostumados com uma interface mais tradicional.
 
 A Microsoft também ofereceu upgrade gratuito para qualquer usuário que já tivesse cópia legalizada do Windows 7 ou 8 no computador.
 
+![Windows10](./img/win10.webp "Windows10")
+
 ##### Windows 11 (2021)
 
 A mais atual versão disponibilidada pela Microsoft, traz algumas mudanças no visual, arredondando bordas e apelando para uma estética mais simples e minimalistas, mais mantendo boa parte do padrão e funcionalidade de seu antecessor, entre suas novas funcionalidades estão: Melhor intregração com o WSL (Subsistema de Linux para Windows), possibilidade de rodar aplicativos android nele e melhorias na segurança e velocidade.
 
+![Windows11](./img/win11.jpg "Windows11")
 
+***
 
 ## Linux
 
@@ -144,6 +168,10 @@ Esses fatores supracitados junto com a criação do MINIX (Outro sistema operaci
 
 Desde então, o kernel linux, junto com os softwares desenvolvidos pelo GNU, passsaram a ser utilizados e muita das futuras distribuições que foram criadas a partir deles, sendo hoje em dia uma dos sistemas operacionais mais utilizados do mundo.
 
+#### Distribuições
+
+Como explicado anteriormente, distribuições linux são basicamente sistemas operacionais construídos em cima de ferramentas do projeto GNU e o kernel Linux, atualmente a mais famosa é o Ubuntu, distro baseada no Debian que é da empresa Canonical, no entanto, existem muitas outras distribuições famosas.
+
 Entre as distribuições linux mais famosas estão:
 
 - Mint.
@@ -156,3 +184,13 @@ Entre as distribuições linux mais famosas estão:
 - CentOS.
 
 Para mais detalhes a respeito dessas distribuições, visite o [Relatório de distribuições Linux](https://github.com/abehidek/senai-des/blob/main/SOP/02-atividade-sistemas-operacionais/relatorio.md).
+
+Eu pessoalmente utilizo em meu laptop a distribuição [NixOS](https://nixos.org/), uma distribuição pouco conhecida mas muito poderosa, ela utiliza um conceito bem diferente das distribuições padrões, fazendo o uso de seu próprio gerenciador de pacotes [Nix](https://github.com/NixOS/nixpkgs). Esta distribuição é reprodutível, declarativa e segura, e ela pode ser utilizada desde servidores até o uso desktop ou laptop (Como meu caso).
+
+***
+
+## Conclusão
+
+Neste texto informativo abordamos apenas dois sistemas operacionais, apesar disso, existe muito conteúdo a ser comentado já que não existem apenas esses dois sistemas sendo utilizados no mundo.
+
+Pessoalmente, entre usar Linux ou Windows, eu opto pelo Linux pela liberdade de fazer o que você quiser com seu sistema, claro que isso vem com o preço da responsabilidade, no entanto, é um preço válido a se pagar, é possível utilizar ou customizar seu sistema inteiramente caso você queira, e isso só é possível no Linux.

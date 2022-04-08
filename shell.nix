@@ -19,7 +19,6 @@ pkgs.mkShell {
     pkgs.pfetch
   ];
   shellHook = ''
-    # maybe set more env-vars
     export PYTHONPATH=${python-with-my-packages}/${python-with-my-packages.sitePackages}
   '';
 }

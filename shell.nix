@@ -15,7 +15,6 @@ in
 pkgs.mkShell {
   buildInputs = [
     python-with-my-packages
-    pkgs.pfetch
     unstable.jdk
     pkgs.pfetch
   ];

@@ -16,7 +16,8 @@ pkgs.mkShell {
   buildInputs = [
     python-with-my-packages
     unstable.jdk
-    pkgs.pfetch
+    unstable.nodejs
+    unstable.nodePackages.typescript
   ];
   shellHook = ''
     export PYTHONPATH=${python-with-my-packages}/${python-with-my-packages.sitePackages}

@@ -1,0 +1,23 @@
+Com o auxílio de HTML e CSS recrie a página que foi apresentada na imagem
+Para obter uma fonte customizada, acesse https://fonts.google.com/
+escolha sua preferida e depois clique em "+ select this style" , faça isso para todas as variações da fonte desejada
+light, regular, medium, semibold e etc.
+
+Utiize as cores que desejar, apenas a estrutura do layout deve ser obedecida.
+
+ATENÇÃO O RETANGULO QUE POSSUE A BORDA VERMELHA, PODEMOS CHAMÁ-LO DE CONTEÚDO,
+ELE DEVERÁ SEMPRE ESTAR CENTRALIZADO AO SITE (INDEPENTENDE DA RESOLUÇÃO) COM UMA LARGURA FIXA
+*NÃO HÁ NECESSIDADE DE CRIAR A RESPONSIVIDADE, APENAS AS RESOLUÇÕES DE DESKTOP
+
+- CASO NA SUA ANÁLISE IDENTIFIQUE QUE ALGUMA PRORIEDADE É UTILIZADA EM MAIS DE UM ELEMENTO, CRIE UMA CLASSE E REUSE A MESMA
+
+Para a construção da página, utilize:
+div
+tags de texto (h1, h2, p, etc)
+display block
+display flex (e suas demais propriedades)
+background
+font-* (size, weight, espaçamentos e etc)
+position (variações)
+border
+

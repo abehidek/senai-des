@@ -9,6 +9,8 @@ let
     tkinter
     pandas
     pip
+    openpyxl
+    matplotlib
     # other python packages you want
   ]);
 in

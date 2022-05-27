@@ -1,4 +1,4 @@
-# inventctl
+# stockctl
 
 Atividade somativa de java - Luciano
 

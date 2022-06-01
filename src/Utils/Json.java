@@ -14,10 +14,6 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Json {
-    public static String readJsonString(Path path) throws IOException {
-        JSONArray jsonArray = readJson(path);
-        return jsonArray.toString();
-    }
     public static JSONArray readJson(Path path) throws IOException {
         List<String> readLines = Files.readAllLines(path, StandardCharsets.UTF_8);
         String stringReadLines = "";

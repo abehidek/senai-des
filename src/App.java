@@ -14,14 +14,12 @@ public class App {
     private User currentUser;
     public boolean isLogged = false;
 
-    public App() throws IOException {
-        updateListUsers();
-    }
+    public App() throws IOException { updateListUsers(); } // Sync ArrayList<User> listUsers with database on object init
 
     public User getCurrentUser() { return currentUser; }
     public void setCurrentUser(User user) { this.currentUser = user; }
 
-    public void updateListUsers() throws IOException {
+    public void updateListUsers() throws IOException { // Retrieve data from ./db/users.json and sync with listUsers
         Path path = Paths.get("./db/users.json");
         JSONArray jsonArray = Json.readJson(path);
         for (int i = 0; i < jsonArray.length(); i++) {
@@ -51,7 +49,7 @@ public class App {
                 return;
             }
         }
-        Console.err("> User or password incorrect");
+        Console.err("User or password incorrect");
     }
 
     public void logoutUser() {

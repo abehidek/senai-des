@@ -14,7 +14,7 @@ public class Main {
         App app = new App();
 
         LoginView.show(app, input);
-        if (app.isLogged) { MenuView.show(); }
+        if (app.isLogged) { MenuView.show(app, input); }
         input.close();
     }
 }

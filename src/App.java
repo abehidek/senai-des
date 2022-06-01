@@ -20,6 +20,8 @@ public class App {
     public void setCurrentUser(User user) { this.currentUser = user; }
 
     public void updateListUsers() throws IOException { // Retrieve data from ./db/users.json and sync with listUsers
+        Log.log("Updating local list of users");
+
         Path path = Paths.get("./db/users.json");
         JSONArray jsonArray = Json.readJson(path);
         for (int i = 0; i < jsonArray.length(); i++) {
@@ -28,6 +30,8 @@ public class App {
     }
 
     public void addUser(String name, String password) throws IOException {
+        Log.log("Adding new user");
+
         for (User user:listUsers) {
             if (user.getName().equals(name)) { Console.err("User already taken"); return; }
         }
@@ -38,21 +42,25 @@ public class App {
         updateListUsers();
     }
 
-    public void authUser(String name, String password) {
+    public void authUser(String name, String password) throws IOException {
+        Log.log("Autheticating user");
+
         if (listUsers.size() == 0) { Console.err("No user created"); }
         for (User user:listUsers) {
             if (user.getName().equals(name) && user.getPassword().equals(password)) { 
                 setCurrentUser(user);
                 isLogged = true;
-                Console.print("Authenticated!");
-                Console.print("Current user: "+currentUser.getName());
+                Log.log("User succefully authenticated");
+                Console.print("\nAuthenticated!\n");
                 return;
             }
         }
-        Console.err("User or password incorrect");
+        Log.log("Invalid user or password");
+        Console.err("\nUser or password incorrect\n");
     }
 
-    public void logoutUser() {
+    public void logoutUser() throws IOException {
+        Log.log("User logout");
         isLogged = false;
         currentUser = null;
     }

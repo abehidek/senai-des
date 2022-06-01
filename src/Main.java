@@ -16,6 +16,7 @@ public class Main {
             LoginView.show(app, input);
             if (app.isLogged) { MenuView.show(app, input); }
             input.close();
+            Log.log("Exiting");
         } catch (Exception e) {
             try {
                 Log.log(e.toString());
@@ -23,6 +24,5 @@ public class Main {
                 e1.printStackTrace();
             }
         }
-        
     }
 }

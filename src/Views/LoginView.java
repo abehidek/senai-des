@@ -1,11 +1,12 @@
 package src.Views;
 
+import java.io.IOException;
 import java.util.Scanner;
 import src.*;
 import src.Utils.Console;
 
 public class LoginView {
-    public static void show(App app, Scanner input) { 
+    public static void show(App app, Scanner input) throws IOException { 
         boolean menu = true;
         while (menu) {
             if (app.isLogged) { menu = false; break; }

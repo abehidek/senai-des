@@ -14,19 +14,30 @@ public class App {
     private User currentUser;
     public boolean isLogged = false;
 
-    public App() {}
+    public App() throws IOException {
+        updateListUsers();
+    }
 
     public User getCurrentUser() { return currentUser; }
     public void setCurrentUser(User user) { this.currentUser = user; }
+
+    public void updateListUsers() throws IOException {
+        Path path = Paths.get("./db/users.json");
+        JSONArray jsonArray = Json.readJson(path);
+        for (int i = 0; i < jsonArray.length(); i++) {
+            listUsers.add(new User(jsonArray.getJSONObject(i).getString("name"), jsonArray.getJSONObject(i).getString("password")));
+        }
+    }
 
     public void addUser(String name, String password) throws IOException {
         for (User user:listUsers) {
             if (user.getName().equals(name)) { Console.err("User already taken"); return; }
         }
 
-        this.listUsers.add(new User(name, password));
         Path path = Paths.get("./db/users.json");
-        // Json.appendJSON(path, new HashMap<String, String>());
+        HashMap<String, String> map = new HashMap<String, String>() {{ put("name", name); put("password", password);  }};
+        Json.appendJSON(path, map);
+        updateListUsers();
     }
 
     public void authUser(String name, String password) {
@@ -37,9 +48,10 @@ public class App {
                 isLogged = true;
                 Console.print("Authenticated!");
                 Console.print("Current user: "+currentUser.getName());
+                return;
             }
-            else { Console.err("> User or password incorrect"); }
         }
+        Console.err("> User or password incorrect");
     }
 
     public void logoutUser() {

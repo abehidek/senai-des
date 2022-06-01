@@ -10,18 +10,22 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Json {
+    public static String readJsonString(Path path) throws IOException {
+        JSONArray jsonArray = readJson(path);
+        return jsonArray.toString();
+    }
     public static JSONArray readJson(Path path) throws IOException {
         List<String> readLines = Files.readAllLines(path, StandardCharsets.UTF_8);
         String stringReadLines = "";
         for (String line:readLines) { stringReadLines += line; }
         return new JSONArray(stringReadLines);
     }
-    public static void appendJSON(Path path, Map map) throws IOException {
+    public static void appendJSON(Path path, HashMap<String, String> map) throws IOException {
         JSONArray jsonArray = readJson(path);
-        // jsonArray.put("name", );
         jsonArray.put(map);
         List<String> writeLines = new ArrayList<>();
         writeLines.add(jsonArray.toString());

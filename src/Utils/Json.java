@@ -25,4 +25,12 @@ public class Json {
         writeLines.add(jsonArray.toString());
         Files.write(path, writeLines, StandardCharsets.UTF_8);
     }
+
+    public static void appendJSON(Path path, String jsonString) throws IOException {
+        JSONArray jsonArray = readJson(path);
+        jsonArray.put(jsonString);
+        List<String> writeLines = new ArrayList<>();
+        writeLines.add(jsonArray.toString());
+        Files.write(path, writeLines, StandardCharsets.UTF_8);
+    }
 }

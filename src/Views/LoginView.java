@@ -15,6 +15,10 @@ public class LoginView {
             char option = userInput.charAt(0);
 
             switch (option) {
+                case '0':
+                    System.out.println("> Bye");
+                    menu = false;
+                    break;
                 case '1':
                     System.out.println("> Log in...");
         
@@ -30,10 +34,6 @@ public class LoginView {
                     String newPassword = Console.input("Type your password: ", input);
             
                     app.addUser(newName, newPassword);
-                    break;
-                case '0':
-                    System.out.println("> Bye");
-                    menu = false;
                     break;
                 default:
                     System.out.println("> An error ocurred");

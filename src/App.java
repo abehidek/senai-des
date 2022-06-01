@@ -3,6 +3,7 @@ package src;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.nio.file.Paths;
+import java.text.MessageFormat;
 import java.io.IOException;
 import java.nio.file.Path;
 import org.json.*;
@@ -10,12 +11,12 @@ import src.Models.*;
 import src.Utils.*;
 
 public class App {
+    private ArrayList<Product> stock = new ArrayList<>();
     private ArrayList<User> listUsers = new ArrayList<>();
     private User currentUser;
     public boolean isLogged = false;
 
-    public App() throws IOException { updateListUsers(); } // Sync ArrayList<User> listUsers with database on object init
-
+    public App() throws IOException { updateListUsers(); updateStockList(); } // Sync ArrayList<User> listUsers with database on object init
     public User getCurrentUser() { return currentUser; }
     public void setCurrentUser(User user) { this.currentUser = user; }
 
@@ -63,5 +64,53 @@ public class App {
         Log.log("User logout");
         isLogged = false;
         currentUser = null;
+    }
+
+    public void updateStockList() throws IOException {
+        Log.log("Updating local stock");
+
+        Path path = Paths.get("./db/stock.json");
+        JSONArray jsonArray = Json.readJson(path);
+        for (int i = 0; i < jsonArray.length(); i++) {
+            stock.add(new Product(
+                jsonArray.getJSONObject(i).getInt("id"), 
+                jsonArray.getJSONObject(i).getString("name"),
+                jsonArray.getJSONObject(i).getString("name"),
+                jsonArray.getJSONObject(i).getInt("qtd")
+            ));
+        }
+    }
+
+    public void listProducts() {
+        for (Product product:stock) {
+            System.out.println(product.getName());
+        }
+    }
+
+    public void addProduct(int id, String name, String type, int qtd) throws IOException {
+        for (Product product:stock) {
+            if (product.getName().equals(name)) { Console.err("Product name already exist"); return; }
+            if (product.getId() == id) { Console.err("Product ID already exist"); return; }
+        }
+
+        // stock.add(new Product(id, name, type, qtd));
+
+        Path path = Paths.get("./db/stock.json");
+        HashMap<String, String> map = new HashMap<String, String>() {{  
+            put("name", name);
+            put("type", type);
+
+        }};
+        HashMap<String, Integer> map2 = new HashMap<String, Integer>() {{
+            put("id", id);
+            put("qtd", qtd);
+        }};
+
+        String stringJson = MessageFormat.format(" { \"id\": {0}, \"name\": {1}, \"type\": {2}, \"qtd\": {3}, }", id, name, type, qtd);
+
+        System.out.println(stringJson);
+
+        // Json.appendJSON(path, map);
+        updateListUsers();
     }
 }

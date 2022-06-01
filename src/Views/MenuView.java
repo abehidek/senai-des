@@ -1,11 +1,12 @@
 package src.Views;
 
+import java.io.IOException;
 import java.util.Scanner;
 import src.*;
 import src.Utils.*;
 
 public class MenuView {
-    public static void show(App app, Scanner input) {
+    public static void show(App app, Scanner input) throws IOException {
         System.out.println("Hello "+app.getCurrentUser().getName());
 
         boolean menu = true;
@@ -15,13 +16,15 @@ public class MenuView {
             char option = userInput.charAt(0);
 
             switch (option) {
+                case '0':
+                    Log.log("Logging out");
+                    app.logoutUser(); menu = false;
+                    break;
                 case '1':
+                    app.listProducts();
                     break;
                 case '2':
-                    break;
-                case '0':
-                    System.out.println("> Bye");
-                    menu = false;
+                    app.addProduct(1, "name", "type", 20);
                     break;
                 default:
                     System.out.println("> An error ocurred");

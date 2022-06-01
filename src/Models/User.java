@@ -1,4 +1,4 @@
-package Models;
+package src.Models;
 
 public class User {
     private String name;

@@ -93,24 +93,14 @@ public class App {
             if (product.getId() == id) { Console.err("Product ID already exist"); return; }
         }
 
-        // stock.add(new Product(id, name, type, qtd));
-
         Path path = Paths.get("./db/stock.json");
-        HashMap<String, String> map = new HashMap<String, String>() {{  
-            put("name", name);
-            put("type", type);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("id", id);
+        jsonObject.put("name", name);
+        jsonObject.put("type", type);
+        jsonObject.put("qtd", qtd);
 
-        }};
-        HashMap<String, Integer> map2 = new HashMap<String, Integer>() {{
-            put("id", id);
-            put("qtd", qtd);
-        }};
-
-        String stringJson = MessageFormat.format(" { \"id\": {0}, \"name\": {1}, \"type\": {2}, \"qtd\": {3}, }", id, name, type, qtd);
-
-        System.out.println(stringJson);
-
-        // Json.appendJSON(path, map);
-        updateListUsers();
+        Json.appendJSON(path, jsonObject);
+        updateStockList();
     }
 }

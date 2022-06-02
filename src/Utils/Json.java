@@ -26,9 +26,9 @@ public class Json {
         Files.write(path, writeLines, StandardCharsets.UTF_8);
     }
 
-    public static void appendJSON(Path path, String jsonString) throws IOException {
+    public static void appendJSON(Path path, JSONObject jsonObject) throws IOException {
         JSONArray jsonArray = readJson(path);
-        jsonArray.put(jsonString);
+        jsonArray.put(jsonObject);
         List<String> writeLines = new ArrayList<>();
         writeLines.add(jsonArray.toString());
         Files.write(path, writeLines, StandardCharsets.UTF_8);

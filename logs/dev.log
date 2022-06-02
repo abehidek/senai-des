@@ -1,0 +1,14 @@
+[2022/06/02 10:53:08] Init program
+[2022/06/02 10:53:08] Updating local list of users
+[2022/06/02 10:53:08] Updating local stock
+[2022/06/02 10:53:10] Autheticating user
+[2022/06/02 10:53:10] User succefully authenticated
+[2022/06/02 10:53:49] java.lang.IllegalArgumentException: can't parse argument number:  "id": {0}
+[2022/06/02 10:53:53] Init program
+[2022/06/02 10:53:53] Updating local list of users
+[2022/06/02 10:53:53] Updating local stock
+[2022/06/02 10:53:59] Adding new user
+[2022/06/02 10:53:59] Updating local list of users
+[2022/06/02 10:54:03] Adding new user
+[2022/06/02 10:54:06] Autheticating user
+[2022/06/02 10:54:06] User succefully authenticated

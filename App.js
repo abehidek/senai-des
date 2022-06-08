@@ -1,39 +1,27 @@
-import { useState, useEffect } from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import Index from './screens/Index.jsx';
+import Login from './screens/Login.jsx';
+import SignUp from './screens/SignUp.jsx';
+import CreateMatch from './screens/CreateMatch.jsx';
+
+const Stack = createNativeStackNavigator();
+
+const queryClient = new QueryClient()
 
 export default function App() {
-  let [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
-      .then(response => response.json())
-      .then(data => setData(data))
-  })
-
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!!</Text>
-      <StatusBar style="auto" />
-      <TouchableOpacity style={styles.button} >Tap here</TouchableOpacity>
-      <Text>{ JSON.stringify(data) }</Text>
-    </View>
+    <QueryClientProvider client={queryClient}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Cadastrar" component={SignUp} />
+          <Stack.Screen name="Index" component={Index} options={{ headerShown:false }}/>
+          <Stack.Screen name="Marcar Partida" component={CreateMatch} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </QueryClientProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  // container: {
-  //   flex: 1,
-  //   backgroundColor: '#fff',
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  // },
-  container: {
-    padding: '0.8rem',
-  },
-  button: {
-    padding: '1rem',
-    backgroundColor: 'blue',
-    borderRadius: '0.5rem',
-  },
-});

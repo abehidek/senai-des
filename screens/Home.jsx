@@ -4,15 +4,13 @@ import { useQuery } from 'react-query'
 import Card from '../components/Card';
 
 export default function Home({ navigation }) {
-  const { isLoading, error, data } = useQuery('placeholder', () =>
+  const { isLoading, error, data } = useQuery('posts', () =>
     fetch('https://jsonplaceholder.typicode.com/posts').then(res =>
        res.json()
     )
   )
   if (isLoading) return <Text>Loading...</Text>
   if (error) return <Text>Error</Text>
-
-  console.log(data)
 
   return (
     <View style={styles.container}>

@@ -2,13 +2,15 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { useQuery } from 'react-query'
 
 export default function Chat() {
-  const { isLoading, error, data } = useQuery('placeholder', () =>
+  const { isLoading, error, data } = useQuery('users', () =>
     fetch('https://jsonplaceholder.typicode.com/users').then(res =>
        res.json()
     )
   )
   if (isLoading) return <Text>Loading...</Text>
   if (error) return <Text>Error</Text>
+
+  console.log(data)
 
   return (
     <View style={styles.container}>

@@ -1,7 +1,9 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { useQuery } from 'react-query'
 
-export default function Chat() {
+import ChatButton from '../components/ChatButton';
+
+export default function Chat({ navigation }) {
   const { isLoading, error, data } = useQuery('users', () =>
     fetch('https://jsonplaceholder.typicode.com/users').then(res =>
        res.json()
@@ -10,17 +12,12 @@ export default function Chat() {
   if (isLoading) return <Text>Loading...</Text>
   if (error) return <Text>Error</Text>
 
-  console.log(data)
-
   return (
     <View style={styles.container}>
-      <Text>Chat</Text>
       <Text>Fetching api from jsonplaceholder.typicode.com/users</Text>
       { 
         data.map((user, index) =>(
-        <Text key={index}>
-          Index: {index}, Name: {user.name}
-        </Text>
+          <ChatButton key={index} user={user} navigation={navigation} />
         )) 
       }
     </View>

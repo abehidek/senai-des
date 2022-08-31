@@ -20,8 +20,10 @@ pkgs.mkShell {
   buildInputs = [
     python-with-my-packages
     unstable.jdk
-    unstable.nodejs
+    pkgs.nodejs
     unstable.nodePackages.typescript
+    unstable.nodePackages.expo-cli
+    unstable.android-studio
   ];
   shellHook = ''
     export PYTHONPATH=${python-with-my-packages}/${python-with-my-packages.sitePackages}

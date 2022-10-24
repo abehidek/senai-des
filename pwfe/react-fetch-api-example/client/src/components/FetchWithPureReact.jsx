@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function FetchWithPureJs() {
+function FetchWithPureReact() {
   const [apiData, setApiData] = useState(undefined)
   
   useEffect(() => {
@@ -18,4 +18,4 @@ function FetchWithPureJs() {
   );
 }
 
-export default FetchWithPureJs;
+export default FetchWithPureReact;

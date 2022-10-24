@@ -12,8 +12,8 @@ function FetchWithPureReact() {
   
   return (
     <div>
-      {JSON.stringify(apiData)}
       <p>With Pure JS</p>
+      {JSON.stringify(apiData)}
     </div>
   );
 }

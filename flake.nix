@@ -1,11 +1,17 @@
 {
   description = "A prisma test project";
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/22.05";
+  inputs.nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
-  outputs = { self, nixpkgs, flake-utils }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system: let
-      pkgs = nixpkgs.legacyPackages.${system};
+
+      pkgs = import nixpkgs {
+        inherit system;
+        config = { allowUnfree = true; };
+      };
+      unstable = nixpkgs-unstable.legacyPackages.${system};
       mpython = pkgs.python310;
       mpython-w-pkgs = mpython.withPackages(p: with p; [
         pygame
@@ -23,21 +29,15 @@
         buildInputs = with pkgs; [
           mpython-w-pkgs
           jdk
+          nodejs
+          yarn
+          nodePackages.expo-cli
+          ngrok
           # android-studio
           nodePackages.typescript
-          nodePackages.expo-cli
-          nodePackages.prisma
-          nodejs-16_x
-          pscale
-          (yarn.override { nodejs = nodejs-16_x;  })
         ];
         shellHook = with pkgs; '']
           export PYTHONPATH=${mpython-w-pkgs}/${mpython-w-pkgs.sitePackages}
-          export PRISMA_MIGRATION_ENGINE_BINARY="${prisma-engines}/bin/migration-engine"
-          export PRISMA_QUERY_ENGINE_BINARY="${prisma-engines}/bin/query-engine"
-          export PRISMA_QUERY_ENGINE_LIBRARY="${prisma-engines}/lib/libquery_engine.node"
-          export PRISMA_INTROSPECTION_ENGINE_BINARY="${prisma-engines}/bin/introspection-engine"
-          export PRISMA_FMT_BINARY="${prisma-engines}/bin/prisma-fmt"
         '';
       };
     });
